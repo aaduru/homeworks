@@ -156,6 +156,14 @@ class House
 
   def better_seeds_query
     # TODO: your code here
+
+    plants = self.plants.includes(:seeds)
+    seeds = []
+    plants.each do |plant|
+      seeds << plant.seeds
+    end
+
+    seeds
   end
 end
 
@@ -218,7 +226,7 @@ class Route
   # use those associated records
   def better_drivers_query
     # TODO: your code here
-    buses = self.buses.includes(drivers)
+    buses = self.buses.includes(:drivers)
 
     all_drivers = {}
 
@@ -231,6 +239,6 @@ class Route
     end
 
     all_drivers
-    
+
   end
 end
