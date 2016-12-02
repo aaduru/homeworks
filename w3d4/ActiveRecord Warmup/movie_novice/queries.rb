@@ -23,11 +23,11 @@
 
 def find_angelina
   # find Angelina Jolie by name in the actors table
-  # data = Actor
-  #  .select(:id, :name)
-  #  .where("actors.name like ?","%Angelina%")
+  Actor
+   .select(:id, :name)
+   .where("actors.name like ?","%Angelina%")
 
-  Actor.find_by_name("Angelina Jolie")
+  # Actor.find_by_name("Angelina Jolie")
 
 end
 
