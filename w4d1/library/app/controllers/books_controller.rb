@@ -19,7 +19,7 @@ class BooksController < ApplicationController
       redirect_to books_url
     else
       render json: newbook.errors.full_messages
-      
+      render :new
     end
   end
 
