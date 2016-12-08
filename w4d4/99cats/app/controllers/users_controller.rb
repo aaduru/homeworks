@@ -22,6 +22,7 @@ class UsersController < ApplicationController
 
     if @user.save
       log_in(@user)
+      msg = UserMailer.welcome_email(@user)
       redirect_to user_url(@user)
     else
       render :new
