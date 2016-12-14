@@ -16,11 +16,5 @@ RSpec.describe UsersController, :type => :controller do
       end
     end
 
-    context "with valid params" do
-      it "redirects user to subs index on success" do
-        post :create, user: {name: "jack_bruce", password: "password"}
-        expect(response).to redirect_to(subs_url)
-      end
-    end
   end
 end
