@@ -152,7 +152,6 @@ function allOrNothing(mod, ...numbers) {
       return false;
     }
   }
-
   return true;
 };
 
