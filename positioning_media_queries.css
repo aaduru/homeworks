@@ -26,6 +26,9 @@ header > img {
 
   list-style: square inside;
 }
+h1 {
+  background-image: url("https://github.com/appacademy/curriculum/blob/master/html-css/assets/stars.png");
+}
 
 ol {
   list-style: upper-roman inside;
@@ -40,7 +43,9 @@ input[type="radio"] {
     -webkit-appearance: none;
     width: 27px;
     height: 27px;
-    background-image: url('clip-art-star-png--clipart-best-5.png');
+    /*background-image: url("clip-art-star-png--clipart-best-5.png");*/
+    background-image: url("https://github.com/appacademy/curriculum/blob/master/html-css/assets/stars.png");
+
     vertical-align: bottom;
 }
 
@@ -127,14 +132,11 @@ label {
     background-size: 50px 50px;
     width: 50px;
     height: 50px;
-    /* nearest relatively positioned parent of absolute positioned child */
-    position: relative;
+  position: relative;
     cursor: pointer;
   }
   .hamburger-dropdown ul {
-    /* Every time we position an element absolutely we should be thinking about
-    which parent element we need to position relatively */
-    position: absolute;
+  position: absolute;
     top: 50px;
     left: 0;
     flex-direction: column;
@@ -142,8 +144,7 @@ label {
     box-shadow: black 5px 5px 10px;
   }
 
-  /* This is how we create pure css dropdown effects. No JS required. */
-  .hamburger-dropdown:hover ul {
+.hamburger-dropdown:hover ul {
     display: flex;
     background: ghostwhite;
   }
